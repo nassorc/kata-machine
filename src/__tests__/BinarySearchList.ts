@@ -1,4 +1,5 @@
 import binary_fn from "@code/BinarySearchList"
+import binary_fn2 from "@code/BinarySearchList2"
 
 test("binary search array", function() {
 
@@ -9,5 +10,12 @@ test("binary search array", function() {
     expect(binary_fn(foo, 69421)).toEqual(false);
     expect(binary_fn(foo, 1)).toEqual(true);
     expect(binary_fn(foo, 0)).toEqual(false);
+
+    expect(binary_fn2(foo, 69)).toEqual(true);
+    expect(binary_fn2(foo, 1336)).toEqual(false);
+    expect(binary_fn2(foo, 69420)).toEqual(true);
+    expect(binary_fn2(foo, 69421)).toEqual(false);
+    expect(binary_fn2(foo, 1)).toEqual(true);
+    expect(binary_fn2(foo, 0)).toEqual(false);
 });
 

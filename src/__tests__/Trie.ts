@@ -2,6 +2,7 @@ import Trie from "@code/Trie";
 
 test("Trie", function() {
     const trie = new Trie();
+
     trie.insert("foo");
     trie.insert("fool");
     trie.insert("foolish");
@@ -14,6 +15,8 @@ test("Trie", function() {
     ]);
 
     trie.delete("fool");
+
+    console.dir(trie, { depth: Infinity });
 
     expect(trie.find("fo").sort()).toEqual([
         "foo",
